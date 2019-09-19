@@ -1,7 +1,7 @@
 /* This code accompanies
  *   Two relaxation time lattice Boltzmann method coupled to fast Fourier transform Poisson solver: Application to electroconvective flow, Journal of Computational Physics
  *	 https://doi.org/10.1016/j.jcp.2019.07.029
- *	 Numerical analysis of electroconvection in cross-flow with unipolar charge injection, Physical Review Fluids
+ *   Numerical analysis of electroconvection in cross-flow with unipolar charge injection, Physical Review Fluids
  *	 
  *   Yifei Guan, Igor Novosselov
  * 	 University of Washington
@@ -226,7 +226,7 @@ __global__ void gpu_collide_save(double *f0, double *f1, double *f2, double *h0,
 	double omega_plus = 1.0 / (nu / cs_square / dt + 1.0 / 2.0) / dt;
 	double omega_minus = 1.0 / (V / (nu / cs_square / dt) + 1.0 / 2.0) / dt;
 	double omega_c_minus = 1.0 / (diffu / cs_square / dt + 1.0 / 2.0) / dt;
-	double omega_c_minus = 1.0 / (VC / (diffu / cs_square / dt) + 1.0 / 2.0) / dt;
+	double omega_c_plus = 1.0 / (VC / (diffu / cs_square / dt) + 1.0 / 2.0) / dt;
 
 	unsigned int y = blockIdx.y;
 	unsigned int x = blockIdx.x*blockDim.x + threadIdx.x;
