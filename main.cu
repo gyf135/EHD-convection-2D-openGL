@@ -55,7 +55,8 @@ int main(int argc, char* argv[])
 	// Compute parameters
 	compute_parameters(T, M, C, Fe);
 
-    printf("Simulating Taylor-Green vortex decay\n");
+    printf("Simulating 3D electroconvection\n");
+    printf("By: Yifei Guan, University of Washington\n");
     printf("      domain size: %ux%u\n",NX,NY);
     printf("                T: %g\n",*T);
     printf("                M: %g\n",*M);
